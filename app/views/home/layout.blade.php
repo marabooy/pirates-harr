@@ -1,180 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Business Template</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>OpenDSS | Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic'
-          rel='stylesheet' type='text/css'>
 
-    @stylesheets('app')
+    <!-- @todo: fill with your company info or remove -->
+    <meta name="description" content="">
+    <meta name="author" content="Themelize.me">
 
+    {{basset_stylesheets("appstrap")}}
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+
+    {{basset_javascripts("htmler")}}
+        <![endif]-->
+
+    <!-- Le fav and touch icons - @todo: fill with your icons or remove -->
+    <link rel="shortcut icon" href="img/icons/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/icons/114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/icons/72x72.png">
+    <link rel="apple-touch-icon-precomposed" href="img/icons/default.png">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300|Rambla|Calligraffitti' rel='stylesheet' type='text/css'>
 </head>
-<body ng-app="myApp">
-<div class="navbar navbar-inverse navbar-static-top">
-    <div class="navbar-inner">
+
+<body class="page page-index">
+<div id="navigation" class="wrapper">
+    <div class="navbar  navbar-static-top">
+
+        <!--Hidden Header Region-->
+
+
+        <!--Header & Branding region-->
+        <div class="header">
+            <div class="header-inner container">
+                <div class="row-fluid">
+                    <div class="span6">
+                        <!--branding/logo-->
+                        <a class="brand" href="index.htm" title="Home">
+                            <h1><span>Open</span>DSS<span>.</span></h1>
+                        </a>
+                        <div class="slogan">An Open Decision Support System</div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
         <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-            <a class="brand" href="index.html">
-                <strong>Pirates of the Horn</strong>
-            </a>
+            <div class="navbar-inner">
 
-            <div class="nav-collapse collapse">
-                <ul class="nav pull-right">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about-us.html">Maps</a></li>
-                    {{--
-                    <!--                    <li class="dropdown">-->
-                    <!--                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
-                    <!--                            PAGES-->
-                    <!--                            <b class="caret"></b>-->
-                    <!--                        </a>-->
-                    <!--                        <ul class="dropdown-menu">-->
-                    <!--                            <li><a href="features.html">Features</a></li>-->
-                    <!--                            <li><a href="pricing.html">Pricing</a></li>-->
-                    <!--                            <li><a href="portfolio.html">Portfolio</a></li>-->
-                    <!--                            <li><a href="coming-soon.html">Coming Soon</a></li>-->
-                    <!--                            <li><a href="sign-in.html">Sign in</a></li>-->
-                    <!--                            <li><a href="sign-up.html">Sign up</a></li>-->
-                    <!--                            <li><a href="backgrounds.html">Backgrounds</a></li>-->
-                    <!--                        </ul>-->
-                    <!--                    </li>-->
-                    --}}
-                    <li><a href="#">Somelink</a></li>
-                    <li><a href="contact">CONTACT US</a></li>
+                <!--mobile collapse menu button-->
+                <a class="btn btn-navbar pull-left" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
 
-                </ul>
+
+
+
+                <!--everything within this div is collapsed on mobile-->
+                <div class="nav-collapse collapse">
+
+                    <!--main navigation-->
+                    <ul class="nav" id="main-menu">
+                        <li class="home-link"><a href="index.htm"><i class="icon-home hidden-phone"></i><span class="visible-phone">Home</span></a></li>
+                        <li class="dropdown"><a href="features.htm" class="dropdown-toggle menu-item" id="features-drop" data-toggle="dropdown">Features +</a>
+                            <!-- Dropdown Menu -->
+                            <ul class="dropdown-menu mega-menu" role="menu" aria-labelledby="features-drop">
+                                <li class="mega-menu-wrapper" role="menuitem"> <span class="menu-title">Mega Menu with links & text items</span>
+                                    <ul class="row-fluid" role="menu">
+                                        <li class="span4" role="menuitem"> <a href="features.htm"><img src="img/features/feature-1.png" alt="Feature 1" /></a> <a href="features.htm" tabindex="-1" class="menu-item">Mobile Friendly</a> <span>Rhoncus adipiscing, magna integer cursus augue eros lacus porttitor magna. Dictumst, odio!</span> </li>
+                                        <li class="span4" role="menuitem"> <a href="features.htm"><img src="img/features/feature-2.png" alt="Feature 2" /></a> <a href="features.htm" tabindex="-1" class="menu-item">24/7 Support</a> <span>Rhoncus adipiscing, magna integer cursus augue eros lacus porttitor magna. Dictumst, odio!</span> </li>
+                                        <li class="span4" role="menuitem"> <a href="features.htm"><img src="img/features/feature-4.png" alt="Feature 4" /></a> <a href="features.htm" tabindex="-1" class="menu-item">99% Uptime</a> <span>Rhoncus adipiscing, magna integer cursus augue eros lacus porttitor magna. Dictumst, odio!</span> </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="pricing.htm" class="menu-item">Pricing</a></li>
+                        <li><a href="customers.htm" class="menu-item">Customers</a></li>
+                        <li class="dropdown"> <a href="about.htm" class="dropdown-toggle" id="about-drop" data-toggle="dropdown">About +</a>
+                            <!-- Dropdown Menu -->
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="about-drop">
+                                <li role="menuitem"><a href="about.htm" tabindex="-1" class="menu-item">About Us</a></li>
+                                <li role="menuitem"><a href="team.htm" tabindex="-1" class="menu-item">Our Team</a></li>
+                                <li role="menuitem"><a href="contact.htm" tabindex="-1" class="menu-item">Contact</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown"> <a href="blog.htm" class="dropdown-toggle" id="blog-drop" data-toggle="dropdown">Blog +</a>
+                            <!-- Dropdown Menu -->
+                            <ul class="dropdown-menu pull-left" role="menu" aria-labelledby="blog-drop">
+                                <li role="menuitem"><a href="blog.htm" tabindex="-1" class="menu-item">Right Sidebar</a></li>
+                                <li role="menuitem"><a href="blog-leftbar.htm" tabindex="-1" class="menu-item">Left Sidebar</a></li>
+                                <li role="menuitem"><a href="blog-post.htm" tabindex="-1" class="menu-item">Blog Post</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
             </div>
         </div>
     </div>
 </div>
-
-<div id="blog_post">
+@yield("content")
+<!-- FOOTER -->
+<footer id="footer">
     <div class="container">
-        <div class="section_header">
-            <h3>App</h3>
-
-            <input type="text" class="input-large search-query" placeholder="Search">
-        </div>
-
         <div class="row">
-            <div class="span8">
-                <img class="post_pic" src="img/blog_post.jpg"/>
-
+            <div class="span3 col">
+                <div class="block contact-block">
+                    <!--@todo: replace with company contact details-->
+                    <h3>Contact Us</h3>
+                    <address>
+                        <p><abbr title="Phone"><i class="icon-phone"></i></abbr> 019223 8092344</p>
+                        <p><abbr title="Email"><i class="icon-envelope"></i></abbr> info@appstrap.me</p>
+                        <p><abbr title="Address"><i class="icon-home"></i></abbr> Sunshine House, Sunville. SUN12 8LU.</p>
+                    </address>
+                </div>
             </div>
-
-            <!-- SideBar -->
-            <div class="span3 sidebar offset1">box2
-                <div class="box">
-                    <div class="sidebar_header">
-                        <h4>Menu</h4>
-                    </div>
-
-                    <ul class="sidebar_menu">
-                        <ul>
-                            <li><a href="#">Coffee</a></li>
-                            <li><a href="#">Design</a></li>
-                            <li><a href="#">Music</a></li>
-                            <li><a href="#">Photography</a></li>
-                            <li><a href="#">Packaging </a></li>
-                        </ul>
+            <div class="span5 col">
+                <div class="block">
+                    <h3>About Us</h3>
+                    <p>Making the web a prettier place one template at a time! We make beautiful, quality, responsive Drupal & web templates!</p>
+                </div>
+            </div>
+            <div class="span4 col">
+                <div class="block newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Stay up to date with our latest news and product releases by signing up to our newsletter.</p>
+                    <!--@todo: replace with mailchimp code-->
+                    <form class="form-inline">
+                        <div class="input-append">
+                            <input class="input-medium" type="text" placeholder="Email" />
+                            <button class="btn btn-primary" type="button">Go!</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div id="toplink"><a href="#top" class="top-link" title="Back to top">Back To Top <i class="icon-chevron-up"></i></a></div>
+            <!--@todo: replace with company copyright details-->
+            <div class="subfooter">
+                <div class="span6">
+                    <p>Site template by <a href="#">OpenDSS</a> | Copyright 2013 &copy; Pirates Of The Horn</p>
+                </div>
+                <div class="span6">
+                    <ul class="inline pull-right">
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
-
-                <div class="box last">
-                    <div class="sidebar_header">
-                        <h4>Recent Posts</h4>
-                    </div>
-
-                    <div class="recent">
-                            <span>
-                                <img src="img/recent_photos.jpg" alt="">
-                            </span>
-
-                        <p>There are many embarrassing hidden in the middle of text.</p>
-                    </div>
-                    <div class="recent">
-                            <span>
-                                <img src="img/recent_photos.jpg" alt="">
-                            </span>
-
-                        <p>There are many embarrassing hidden in the middle of text.</p>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
+</footer>
 
-    <!-- starts footer -->
-    <footer id="footer">
-        <div class="container">
-            <div class="row info">
-                <div class="span6 residence">
-                    <ul>
-                        <li>Nairobi Kenya</li>
-                        <li>P.o. Box Blah.</li>
-                    </ul>
-                </div>
-                <div class="span5 touch">
-                    <ul>
-                        <li><strong>P.</strong> 1 817 274 2933</li>
-                        <li><strong>E.</strong><a href="#"> developers@codegladiators.com</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row credits">
-                <div class="span12">
-                    <div class="row social">
-                        <div class="span12">
-                            <a href="#" class="facebook">
-                                <span class="socialicons ico1"></span>
-                                <span class="socialicons_h ico1h"></span>
-                            </a>
-                            <a href="#" class="twitter">
-                                <span class="socialicons ico2"></span>
-                                <span class="socialicons_h ico2h"></span>
-                            </a>
-                            <a href="#" class="gplus">
-                                <span class="socialicons ico3"></span>
-                                <span class="socialicons_h ico3h"></span>
-                            </a>
-                            <a href="#" class="flickr">
-                                <span class="socialicons ico4"></span>
-                                <span class="socialicons_h ico4h"></span>
-                            </a>
-                            <a href="#" class="pinterest">
-                                <span class="socialicons ico5"></span>
-                                <span class="socialicons_h ico5h"></span>
-                            </a>
-                            <a href="#" class="dribble">
-                                <span class="socialicons ico6"></span>
-                                <span class="socialicons_h ico6h"></span>
-                            </a>
-                            <a href="#" class="behance">
-                                <span class="socialicons ico7"></span>
-                                <span class="socialicons_h ico7h"></span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row copyright">
-                        <div class="span12">
-                            © 2013 Pirates of the Horn.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    @javascripts('app')
-
+<!--Scripts -->
+{{basset_javascripts("appstrap")}}
 </body>
 </html>

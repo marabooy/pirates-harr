@@ -57,6 +57,56 @@ return array(
 
             $directory->apply('JsMin');
         },
+
+        'htmler' => function ($collection) {
+
+            $collection->directory(
+                'appstrap/js',
+                function ($collection) {
+                    $collection->add('html5shim.js');
+                }
+
+            )->apply("JsMin");
+        },
+
+        'appstrap' => function ($collection) {
+
+            $collection->directory(
+                'appstrap/css',
+                function ($collection) {
+                    $collection->add('bootstrap.css');
+                    $collection->add('responsive.css');
+                    $collection->add('flexslider.css');
+                    $collection->add('theme-style.css');
+                    $collection->add('colour-red.css');
+
+                }
+
+            )->apply(array('CssMin', 'UriRewriteFilter'));
+
+            $collection->directory(
+                'appstrap/js',
+                function ($collection) {
+                    $collection->add('jquery.js');
+                    $collection->add('bootstrap.js');
+                    $collection->add('/angularjs/angular.min.js');
+                    $collection->add('/angularjs/angular-resource.min.js');
+                    $collection->add('jquery.quicksand.js');
+                    $collection->add('jquery.flexslider-min.js');
+                    $collection->add('script.js');
+                }
+            )->apply('JsMin');
+
+            $collection->directory(
+                'js/app',
+                function ($collection) {
+                    $collection->add('directives.js');
+                    $collection->add('services.js');
+                    $collection->add('controllers.js');
+                    $collection->add('app.js');
+                }
+            )->apply('JsMin');
+        },
         'app' => function ($collection) {
 
             $collection->directory(
