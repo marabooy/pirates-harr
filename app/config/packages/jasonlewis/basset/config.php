@@ -57,6 +57,78 @@ return array(
 
             $directory->apply('JsMin');
         },
+        'htmler' => function ($collection) {
+
+            $collection->directory(
+                'appstrap/js',
+                function ($collection) {
+                    $collection->add('html5shim.js');
+                }
+
+            )->apply("JsMin");
+        },
+        'nvd3' => function ($collection) {
+
+            $collection->directory(
+                'js/nvd3',
+                function ($collection) {
+                    $collection->add('html5shim.js');
+
+
+                    $collection->add("lib/d3.v3.js");
+                    $collection->add("nv.d3.js");
+                    $collection->add("src/tooltip.js");
+                    $collection->add("src/utils.js");
+                    $collection->add("src/models/axis.js");
+                    $collection->add("src/models/discreteBar.js");
+                    $collection->add("src/models/discreteBarChart.js");
+                    $collection->add("src/models/legend.js");
+                    $collection->add("src/models/pie.js");
+                    $collection->add("src/models/pieChart.js");
+                    $collection->add("src/nv.d3.css");
+                }
+
+            )->apply("JsMin");
+        },
+        'appstrap' => function ($collection) {
+
+            $collection->directory(
+                'appstrap/css',
+                function ($collection) {
+                    $collection->add('bootstrap.css');
+                    $collection->add('responsive.css');
+                    $collection->add('flexslider.css');
+                    $collection->add('theme-style.css');
+                    $collection->add('colour-red.css');
+
+                }
+
+            )->apply(array('CssMin', 'UriRewriteFilter'));
+
+            $collection->directory(
+                'appstrap/js',
+                function ($collection) {
+                    $collection->add('jquery.js');
+                    $collection->add('bootstrap.js');
+                    //    $collection->add('/angularjs/angular.min.js');
+                    //   $collection->add('/angularjs/angular-resource.min.js');
+                    $collection->add('jquery.quicksand.js');
+                    $collection->add('jquery.flexslider-min.js');
+                    $collection->add('script.js');
+                    //   $collection->add('nv.d3.js');
+                }
+            )->apply('JsMin');
+
+//            $collection->directory(
+//                'js/app',
+//                function ($collection) {
+//                    $collection->add('directives.js');
+//                    $collection->add('services.js');
+//                    $collection->add('controllers.js');
+//                    $collection->add('app.js');
+//                }
+//            )->apply('JsMin');
+        },
         'app' => function ($collection) {
 
             $collection->directory(
@@ -91,6 +163,17 @@ return array(
                     $collection->add('app.js');
                 }
             )->apply('JsMin');
+        }
+    ,
+        'leaflet' => function ($collection) {
+            $collection->directory(
+                'js/leaflet',
+                function ($collection) {
+                    $collection->add('leaflet.css');
+                    $collection->add('leaflet.js');
+                    $collection->add('geodata-parser.js');
+                }
+            );
         }
     ),
     /*
