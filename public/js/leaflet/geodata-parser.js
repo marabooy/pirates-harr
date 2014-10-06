@@ -19,10 +19,10 @@ $(document).ready(function () {
     var whiteIcon = new FruitIcons({iconUrl: '/img/leaflet/fruits-grey.png'});
 
 
-    L.tileLayer('http://{s}.tile.cloudmade.com/{key}/22677/256/{z}/{x}/{y}.png', {
-        attribution: 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2012 CloudMade',
-        key: 'BC9A493B41014CAABB98F0471D759707'
-    }).addTo(map);
+   L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    maxZoom: 18
+}).addTo(map)
 
 
     function openDesMapStart() {
